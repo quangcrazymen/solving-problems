@@ -24,8 +24,7 @@ let addTwoNumbers = function (l1, l2) {
 
 let myPrint = (l1) => {
     console.log(l1.val)
-    myPrint(l1.next)
-    if (l1.next === null) return
+    if (l1.next !== null) myPrint(l1.next)
+    else return 
 }
-
 myPrint(f)
