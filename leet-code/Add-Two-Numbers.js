@@ -35,3 +35,4 @@ console.log(typeof(["1","2","3"].join("")))
 const aString = ["1","2","3"].join("")
 console.log(typeof(Number(aString)))
 
+// write a sub-function to turn array to linked-list
