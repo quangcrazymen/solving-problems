@@ -21,10 +21,17 @@ let addTwoNumbers = function (l1, l2) {
 // console.log(addTwoNumbers(1,2))
 // console.log([1,2,4].reverse())
 // console.log([1,2,4].splice(0,1))
+let number1 = []
 
 let myPrint = (l1) => {
-    console.log(l1.val)
-    if (l1.next !== null) myPrint(l1.next)
-    else return 
+    l1.next !== null? myPrint(l1.next) : null
+    number1.push(l1.val)
 }
 myPrint(f)
+console.log(number1)
+
+//Test join function
+console.log(typeof(["1","2","3"].join("")))
+const aString = ["1","2","3"].join("")
+console.log(typeof(Number(aString)))
+
