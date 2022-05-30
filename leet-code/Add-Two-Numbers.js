@@ -13,10 +13,11 @@ const d = new ListNode(4, null)
 const e = new ListNode(6, d)
 const f = new ListNode(5, e)
 
-
+//Nice try but not good enough
 let addTwoNumbers = function (l1, l2) {
     let number1 = []
     let number2 = []
+    // use for loop for
     let myPrint1 = (l1) => {
         l1.next !== null? myPrint1(l1.next) : null
         number1.push(l1.val)
@@ -41,17 +42,17 @@ let addTwoNumbers = function (l1, l2) {
     let result = new ListNode() 
     let i = sum.length
     console.log(i)
-    function chainNode(sum,i){
-        let nextNode = new ListNode()
-        let newNode = new ListNode(sum[i],nextNode)
-        if(i===0){
-            return 
-        }else{
-            chainNode(sum, i-1)
-        }
-        return newNode
+    let node = new ListNode()
+    function chainNode(node,sum,i){
+        if(i===0) return 
+        node.val = sum[i-1]
+        let nextNode = new ListNode(undefined,null)
+        if (i!==1) node.next =nextNode;
+        chainNode(nextNode,sum, i-1)
     }
-    console.log(chainNode(sum,i))
+    chainNode(node,sum,i)
+    console.log(node)
+    return node
 }
 // console.log(1+2)
 // console.log(addTwoNumbers(1,2))
