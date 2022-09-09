@@ -12,6 +12,7 @@ def flatlandSpaceStations(n, c):
     temp = c.copy()
     temp.pop(0)
     result = list(map(distances,temp,c))
+    # Try to vectorize calculation
     if 0 not in c: result.append(c[0])
     if n not in c: result.append(n-1-c[len(c)-1])
     return max(result)
