@@ -5,6 +5,7 @@ n = 4
 k = 2 
 
 # maybe try to use recursion
+# https://www.baeldung.com/cs/array-generate-all-permutations
 
 def absolutePermutation(n,k):
     elements = [i for i in range(1,n+1)]
